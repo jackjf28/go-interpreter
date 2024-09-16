@@ -64,3 +64,14 @@ func LookupIdent(ident string) TokenType {
 	}
 	return IDENT
 }
+
+const (
+	_ int = iota
+	LOWEST
+	EQUALS      // ==
+	LESSGREATER // > or <
+	SUM         // +
+	PRODUCT     // *
+	PREFIX      // -X or !X
+	CALL        // myFunction(X)
+)
